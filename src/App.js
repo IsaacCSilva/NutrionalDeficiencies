@@ -15,7 +15,7 @@ function App() {
 
           <AmplifySignOut /> 
 
-          <h2>Nutritional Defencies</h2>
+          <h2>Nutritional Deficiencies</h2>
       </header>
     </div>
   );
