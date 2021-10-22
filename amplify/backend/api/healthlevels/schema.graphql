@@ -1,0 +1,6 @@
+type HealthLevels @model {
+  id: ID!
+  name: String!
+  description: String!
+  measurement: Int!
+}

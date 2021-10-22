@@ -1,0 +1,158 @@
+type HealthLevels {
+  id: ID!
+  name: String!
+  description: String!
+  measurement: Int!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelHealthLevelsConnection {
+  items: [HealthLevels]
+  nextToken: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelHealthLevelsFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  description: ModelStringInput
+  measurement: ModelIntInput
+  and: [ModelHealthLevelsFilterInput]
+  or: [ModelHealthLevelsFilterInput]
+  not: ModelHealthLevelsFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getHealthLevels(id: ID!): HealthLevels
+  listHealthLevelss(filter: ModelHealthLevelsFilterInput, limit: Int, nextToken: String): ModelHealthLevelsConnection
+}
+
+input CreateHealthLevelsInput {
+  id: ID
+  name: String!
+  description: String!
+  measurement: Int!
+}
+
+input UpdateHealthLevelsInput {
+  id: ID!
+  name: String
+  description: String
+  measurement: Int
+}
+
+input DeleteHealthLevelsInput {
+  id: ID!
+}
+
+type Mutation {
+  createHealthLevels(input: CreateHealthLevelsInput!, condition: ModelHealthLevelsConditionInput): HealthLevels
+  updateHealthLevels(input: UpdateHealthLevelsInput!, condition: ModelHealthLevelsConditionInput): HealthLevels
+  deleteHealthLevels(input: DeleteHealthLevelsInput!, condition: ModelHealthLevelsConditionInput): HealthLevels
+}
+
+input ModelHealthLevelsConditionInput {
+  name: ModelStringInput
+  description: ModelStringInput
+  measurement: ModelIntInput
+  and: [ModelHealthLevelsConditionInput]
+  or: [ModelHealthLevelsConditionInput]
+  not: ModelHealthLevelsConditionInput
+}
+
+type Subscription {
+  onCreateHealthLevels: HealthLevels @aws_subscribe(mutations: ["createHealthLevels"])
+  onUpdateHealthLevels: HealthLevels @aws_subscribe(mutations: ["updateHealthLevels"])
+  onDeleteHealthLevels: HealthLevels @aws_subscribe(mutations: ["deleteHealthLevels"])
+}

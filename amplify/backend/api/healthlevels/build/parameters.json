@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "healthlevels",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authisaacsee5b8dbb",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-isaacs-dev-00607-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/2816d6b38f6395cd668f0cf23e09d9e5abeedf83"
+}
