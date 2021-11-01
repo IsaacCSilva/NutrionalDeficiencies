@@ -1,7 +1,12 @@
 .App {
-  text-align: center;
+  justify-content: center;
 }
-
+.chart{
+  width: 1020px;
+  background-color: white;
+  margin-right: 800px;
+  margin-bottom:100px ;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,16 +27,179 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
 
+}
+.head{
+    background-color: #FF9900;
+      height: 10vh;
+    width: 100%;
+    margin-bottom:  auto;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: whitesmoke;
+
+}
+.home:hover {
+    opacity: 0.8;
+}
+.recommended:hover{
+      opacity: 0.8;
+
+}
+.profile:hover{
+      opacity: 0.8;
+}
 .App-link {
   color: #61dafb;
 }
+.title{
+left: 40px;
+position: fixed;
+font-family: fantasy;
+}
+.home{
+    left: 310px;
+position: fixed;
+    background-color: #FF9900;
 
-.AmplifySignOut{
-  background-color: black;
+max-width: 153px;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+border-radius: initial;
+}
+.recommended{
+    left: 490px;
+position: fixed;
+    background-color: #FF9900;
+
+max-width: 153px;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+border-radius: initial;
+}
+.profile{
+  left: 720px;
+position: fixed;
+    background-color: #FF9900;
+
+max-width: 153px;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+border-radius: initial;
 }
 
+.DailyValue{
+  background-color: cornflowerblue;
+border-radius: 10px;
+max-width: 153px;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+left: 70px;
+bottom: 775px;
+position: fixed;
+}
+.TestResult{
+    background-color: cadetblue;
+border-radius: 10px;
+
+max-width: 153px;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+left: 260px;
+bottom: 775px;
+position: fixed;
+}
+.TEST{
+  color: cadetblue;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
