@@ -38,7 +38,7 @@ export default class ProgressBar extends React.Component{
 		timeee = today.getSeconds();
 
 		this.state = {
-		  percentage: parseFloat(localStorage.getItem('pkey')),
+		  percentage: ((localStorage.getItem('pkey')) !== null ? parseFloat(localStorage.getItem('pkey')) : 0),
 		  coin: parseFloat(localStorage.getItem('coin')),
 		  currentTime: time,
 		  currentMinutes: timee,
@@ -114,6 +114,7 @@ export default class ProgressBar extends React.Component{
 
 		}
 		// alert(localStorage.getItem('pkey'))
+		alert("Added!")
 		const l2 = localStorage.getItem('pkey')
 		const l3 = "5"
 		const l4 = "7"
