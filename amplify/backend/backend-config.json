@@ -42,5 +42,11 @@
         }
       }
     }
+  },
+  "storage": {
+    "amplifydynamonutrition1": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }

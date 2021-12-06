@@ -8,16 +8,25 @@
   margin-bottom:100px ;
 }
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  max-width: 80px;
+  width: 100%;
+  right: 80px;
+  margin-left: auto;
+  position: absolute;
+  top: 147px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
-
+.recommendlist{
+  font-family: sans-serif;
+  color: cadetblue;
+  overflow: scroll;
+  height: 400px;
+}
 .App-header {
   background-color: white;
   min-height: 100vh;
@@ -87,12 +96,14 @@ border-color: initial;
 border-style: initial;
 border-radius: initial;
 }
+
+
 .recommended{
     left: 490px;
 position: fixed;
     background-color: #FF9900;
 
-max-width: 153px;
+max-width: 180px;
 width: 100%;
 margin-bottom: 0;
 font-size: 0.875rem;
@@ -165,7 +176,7 @@ text-transform: uppercase;
 border-width: 0;
 border-color: initial;
 border-style: initial;
-left: 70px;
+left: 125px;
 bottom: 775px;
 position: fixed;
 }
@@ -193,9 +204,102 @@ text-transform: uppercase;
 border-width: 0;
 border-color: initial;
 border-style: initial;
-left: 260px;
+left: 315px;
 bottom: 775px;
 position: fixed;
+}
+
+
+.modal_content {
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  max-height: 740px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  border-color: #FF9900;
+}
+.modal_content1 {
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+  top: 15%;
+  left: 30%;
+  width: 40%;
+  max-height: 740px;
+  padding: 20px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  border: 2px solid black;
+  border-color: #FF9900;
+}
+.close {
+  color: #FF9900;
+  float: right;
+}
+
+.close:hover {
+  color: cadetblue;
+  cursor: pointer;
+}
+.AddValue{
+  color: #FF9900;
+  font-family: sans-serif;
+}
+.SaveDailyIntake{
+    background-color: cadetblue;
+border-radius: 10px;
+
+max-width: match-parent;
+width: 100%;
+margin-bottom: 0;
+font-size: 0.875rem;
+font-family: sans-serif;
+color:  white;
+font-weight: 600;
+text-align: center;
+white-space: pre-wrap;
+vertical-align: middle;
+touch-action: manipulation;
+cursor: pointer;
+user-select: none;
+background-image: none;
+padding: 1rem;
+letter-spacing: 0.75px;
+text-transform: uppercase;
+border-width: 0;
+border-color: initial;
+border-style: initial;
+}
+.textDailyAmount{
+  border-radius: 5px;
+  border-style: solid;
+  height: 35px;
+}
+.textDailyAmount:focus {
+  border-color: cornflowerblue;
+}
+.amountDaily{
+     margin-left: 177px;
+    margin-top: -33px;
+    color: #FF9900;
+}
+.pBarpercent{
+  color: cornflowerblue;
+    margin-left: 310px;
+  position: absolute;
+  bottom: 70px;
+
+}
+.pBarpercentdesc{
+  color: #FF9900;
+    margin-left: 1312px;
+  position: absolute;
+  bottom: 200px;
 }
 .TEST{
   color: cadetblue;
@@ -207,4 +311,35 @@ position: fixed;
   to {
     transform: rotate(360deg);
   }
+}
+.coinLogo{
+  max-width: 80px;
+  width: 100%;
+  right: 80px;
+  margin-left: auto;
+  position: absolute;
+  top: 147px;
+}
+.coinCount{
+  color:cadetblue;
+  max-width: 80px;
+  width: 100%;
+  right: 170px;
+  font-size: 200%;
+  font-family: fantasy;
+  position: absolute;
+  top: 115px;
+}
+
+.selectionDeficiency{
+  border-radius: 5px;
+border-style: solid;
+height: 35px;
+margin-bottom: 10px;
+background-color: white;
+width: 220px;
+color: #FF9900;
+height: 41px;
+font-weight: bold;
+width: -moz-available;
 }
