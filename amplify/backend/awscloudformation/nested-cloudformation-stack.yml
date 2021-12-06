@@ -139,6 +139,15 @@
         }
       }
     },
+    "storageamplifydynamonutrition1": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-isaacs-dev-00607-deployment/amplify-cfn-templates/storage/amplifydynamonutrition1-cloudformation-template.json",
+        "Parameters": {
+          "env": "dev"
+        }
+      }
+    },
     "UpdateRolesWithIDPFunction": {
       "DependsOn": [
         "AuthRole",

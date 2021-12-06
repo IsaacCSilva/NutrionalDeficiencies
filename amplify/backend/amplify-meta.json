@@ -41,7 +41,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-isaacs-dev-00607-deployment/amplify-cfn-templates/auth/isaacsee5b8dbb-cloudformation-template.yml",
         "logicalId": "authisaacsee5b8dbb"
       },
-      "lastPushTimeStamp": "2021-10-22T01:58:11.107Z",
+      "lastPushTimeStamp": "2021-11-28T23:42:24.078Z",
       "output": {
         "UserPoolId": "us-east-1_qHqt4ldF2",
         "AppClientIDWeb": "7of99a1b4am14s8oi7c27sanap",
@@ -73,7 +73,18 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-isaacs-dev-00607-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apihealthlevels"
       },
-      "lastPushTimeStamp": "2021-10-22T02:01:10.329Z"
+      "lastPushTimeStamp": "2021-11-28T23:43:41.219Z"
+    }
+  },
+  "storage": {
+    "amplifydynamonutrition1": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-isaacs-dev-00607-deployment/amplify-cfn-templates/storage/amplifydynamonutrition1-cloudformation-template.json",
+        "logicalId": "storageamplifydynamonutrition1"
+      },
+      "lastPushTimeStamp": "2021-11-28T23:43:41.202Z"
     }
   }
 }

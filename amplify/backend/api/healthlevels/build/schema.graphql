@@ -2,7 +2,7 @@ type HealthLevels {
   id: ID!
   name: String!
   description: String!
-  measurement: Int!
+  testResult: Int!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -94,7 +94,7 @@ input ModelHealthLevelsFilterInput {
   id: ModelIDInput
   name: ModelStringInput
   description: ModelStringInput
-  measurement: ModelIntInput
+  testResult: ModelIntInput
   and: [ModelHealthLevelsFilterInput]
   or: [ModelHealthLevelsFilterInput]
   not: ModelHealthLevelsFilterInput
@@ -122,14 +122,14 @@ input CreateHealthLevelsInput {
   id: ID
   name: String!
   description: String!
-  measurement: Int!
+  testResult: Int!
 }
 
 input UpdateHealthLevelsInput {
   id: ID!
   name: String
   description: String
-  measurement: Int
+  testResult: Int
 }
 
 input DeleteHealthLevelsInput {
@@ -145,7 +145,7 @@ type Mutation {
 input ModelHealthLevelsConditionInput {
   name: ModelStringInput
   description: ModelStringInput
-  measurement: ModelIntInput
+  testResult: ModelIntInput
   and: [ModelHealthLevelsConditionInput]
   or: [ModelHealthLevelsConditionInput]
   not: ModelHealthLevelsConditionInput
