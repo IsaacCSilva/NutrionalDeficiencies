@@ -30,6 +30,7 @@ const Thumb = styled.div`
 export default class ProgressBar extends React.Component{
 	constructor(props) {
 		super(props)
+
 		var today = new Date(),
 		time = today.getHours();
 		var today = new Date(),
@@ -38,7 +39,7 @@ export default class ProgressBar extends React.Component{
 		timeee = today.getSeconds();
 
 		this.state = {
-		  percentage: parseFloat(localStorage.getItem('pkey')),
+		  percentage: ((localStorage.getItem('pkey')) !== null ? parseFloat(localStorage.getItem('pkey')) : 0),
 		  coin: parseFloat(localStorage.getItem('coin')),
 		  currentTime: time,
 		  currentMinutes: timee,
@@ -113,8 +114,8 @@ export default class ProgressBar extends React.Component{
 			localStorage.setItem('test', JSON.stringify(this.state.percentage + parseFloat(l)))
 
 		}
-		// alert(localStorage.getItem('pkey'))
 		const l2 = localStorage.getItem('pkey')
+		alert(l2)
 		const l3 = "5"
 		const l4 = "7"
 		// if(	parseFloat(l2)>= 90.0){
@@ -173,7 +174,7 @@ export default class ProgressBar extends React.Component{
 	return(
 	<> 
 	{parseInt(localStorage.getItem('pkey')) >= 100 && localStorage.setItem('pkey',JSON.stringify(100))}
-	{(parseInt(localStorage.getItem('pkey')) >= 100 && this.props.con)?<Confetti width = "1800" height ="900" numberOfPieces = "500"/>: <> </>}
+	{(parseInt(localStorage.getItem('pkey')) >= 100 && (this.props.con || this.props.con1 || this.props.opencheck))?<Confetti width = "1800" height ="900" numberOfPieces = "500"/>: <> </>}
 	<div>
 		<Linegrph/>
 	</div>

@@ -74,7 +74,7 @@ function App()  {
       </div>
       <div className="chart">
         {localStorage.setItem('coin', 0)}
-                          <ProgressBar opencheck = {togglePopup2} con = {showElement}/>
+                          <ProgressBar opencheck = {togglePopup2} con = {togglePopup} con1 = {togglePopup1}/>
                           <h1 className = "pBarpercentdesc"> Daily Value </h1>
       </div>
 

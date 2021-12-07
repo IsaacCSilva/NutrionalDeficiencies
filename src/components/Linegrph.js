@@ -10,25 +10,32 @@ function Linegrph(){
 
 	// sunday		
 	if(date == 0){
-		ar[6] = parseFloat(localStorage.getItem('pkey'));
+		var z = parseFloat(localStorage.getItem('pkey'));
+		ar[6] = z;
 	}
 	if(date == 1){
-		ar[0] = parseFloat(localStorage.getItem('pkey'));
+		var o = parseFloat(localStorage.getItem('pkey'));
+		ar[0] = o;
 	}
 	if(date == 2){
-		ar[1] = parseFloat(localStorage.getItem('pkey'));
+		var t = parseFloat(localStorage.getItem('pkey'));
+		ar[1] = t;
 	}
 	if(date == 3){
-		ar[2] = parseFloat(localStorage.getItem('pkey'));
+		var th = parseFloat(localStorage.getItem('pkey'));
+		ar[2] = th;
 	}
 	if(date == 4){
-		ar[3] = parseFloat(localStorage.getItem('pkey'));
+		var f = parseFloat(localStorage.getItem('pkey'));
+		ar[3] = f;
 	}
 	if(date == 5){
-		ar[4] = parseFloat(localStorage.getItem('pkey'));
+		var fi = parseFloat(localStorage.getItem('pkey'));
+		ar[4] = fi;
 	}
 	if(date == 6){
-		ar[5] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		ar[5] = s;
 	}
 	// }
 	return <Line data= {{ 
