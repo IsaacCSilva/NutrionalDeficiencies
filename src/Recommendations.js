@@ -42,7 +42,7 @@ const Recommendations = props => {
               {localStorage.getItem('key') === "Iron" && <img className = "RecommendedMagnesium" src="./iron.png"  />}
               {localStorage.getItem('key') === "Vitamin B6" && <img className = "RecommendedMagnesium" src="./VitaminB6.png"  />}
               {localStorage.getItem('key') === "Vitamin B12" && <img className = "RecommendedMagnesium" src="./VitaminB12.png"  />}
-              {localStorage.getItem('key') === "select" && <img className = "RecommendedMagnesium" src="./DefaultD.png"  />}
+              {(localStorage.getItem('key') == "select" || localStorage.getItem('key') == null) && <img className = "RecommendedMagnesium" src="./DefaultD.png"  />}
 
             {/* <div className= "recommendlist">
             {Fruits.map(data => (

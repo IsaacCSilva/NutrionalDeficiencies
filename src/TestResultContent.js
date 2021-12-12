@@ -17,7 +17,7 @@ class TestResultContent extends Component{
         super(props)
         this.state = {
             measurement: localStorage.getItem('mkey'),
-            value : localStorage.getItem('key')
+            value : (localStorage.getItem('key') !== null ? localStorage.getItem('key') : "select") 
         }
 
     }
