@@ -30,37 +30,50 @@ const Thumb = styled.div`
 export default class ProgressBar extends React.Component{
 	constructor(props) {
 		super(props)
+
 		var today = new Date(),
 		time = today.getHours();
 		var today = new Date(),
 		timee = today.getMinutes();
 		var today = new Date(),
 		timeee = today.getSeconds();
-
+		
 		this.state = {
 		  percentage: ((localStorage.getItem('pkey')) !== null ? parseFloat(localStorage.getItem('pkey')) : 0),
-		  coin: parseFloat(localStorage.getItem('coin')),
+		  coin: JSON.parse(localStorage.getItem('coin')),
 		  currentTime: time,
 		  currentMinutes: timee,
 		  currentSeconds: timeee,
 		  test: true,
 		}
+		// localStorage.setItem("pkey",0)
+		var m = ((23-today.getHours()) * 3600000) + ((59-today.getMinutes()) * 60000) + ((59-today.getSeconds()) * 1000) + 1;
+		localStorage.setItem("t", "yes")
+
+		setInterval(() => {
+			localStorage.setItem('pkey', 0)
+					  }, parseInt(m));
+
+		setTimeout(() => {
+			console.log("remove")
+			localStorage.removeItem("t")
+		}, 5000);
+
 		// localStorage.setItem('ckey', this.state.coin)
 		// if(parseFloat(localStorage.getItem('pkey')) === 0){
 		// 	this.setState({coin: localStorage.getItem("coin")});
 		// 	localStorage.setItem("coin", this.state.coin);
 		// }
-		//localStorage.setItem('pkey', 0)
-
-		if(this.state.currentTime === 24 && this.state.currentMinutes === 0 && this.state.currentSeconds === 0){
-			localStorage.setItem('pkey', 0)
-		}
+		// localStorage.setItem('pkey', 0)
 		// localStorage.setItem('pkey', 0) //TO RESET
 		// localStorage.setItem('test', 0)
 		// if(this.state.currentTime === 22){
 		// 	this.setState({      percentage: 0    })
 		// 	localStorage.setItem('pkey', 0)
 		// }
+		// localStorage.setItem("count1", "0")
+		// localStorage.setItem("count2", "0")
+		// localStorage.setItem("count3", "0")
 
 		this.nextStep = this.nextStep.bind(this);
 
@@ -85,6 +98,85 @@ export default class ProgressBar extends React.Component{
 
 		}
 	  }
+
+	//   setState(state) {
+	// 	localStorage.setItem('coin', JSON.stringify(state));
+	// 	super.setState(state);
+	//   }
+	
+	//   componentDidMount(){
+	// 	const l2 = localStorage.getItem('test')
+
+	// 	const l3 = "5"
+	// 	const l4 = "7"
+	// 	const countt = localStorage.getItem("count1");
+	// 	const countt1 = localStorage.getItem("count2");
+	// 	const countt2 = localStorage.getItem("count3");
+	// 	var count = countt;
+	// 	var count1 = countt1;
+	// 	var count2 = countt2;
+
+	// 	// alert(localStorage.getItem("coin"))
+	// 	if(	parseFloat(l2)>= 90.0 && (count) < 1){
+	// 		count = (count) + 1;
+	// 		// this.setState(previousState => ({
+	// 		// 	coin: previousState.coin + 7
+	// 		// 	}))			
+	// 		// this.setState({coin: parseInt(localStorage.getItem("coin")) + parseInt(l4)});
+	// 		// //this.setState({...this.state, coin: this.state.coin + 7});
+	// 		// // alert(localStorage.getItem('coin'))
+	// 		// localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("coin"))+ parseInt(l4)))
+	// 		// const g = localStorage.getItem("coin");
+	// 		// // alert(localStorage.getItem('qkey'))
+	// 		// localStorage.setItem("qkey", g);
+	// 		this.setState({coin: (parseInt(localStorage.getItem("qkey") + 7))})
+	// 		//this.setState({...this.state, coin: this.stat
+	// 		// e.coin + 5});
+	// 		// alert(localStorage.getItem('coin'))
+
+	// 		localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("qkey"))+ parseInt(l4)))
+	// 		// alert(localStorage.getItem('coin'))
+	// 		const g = localStorage.getItem("coin");
+	// 		localStorage.setItem("qkey", g);
+
+	// 	}
+	// 	else if (parseFloat(l2) >= 50.0 && parseFloat(l2) < 90.0 && (count1) < 1){
+	// 		(count1) = (count1) + 1;
+	// 		// alert(localStorage.getItem("qkey"))
+	// 		// this.setState((prev) => ({ coin: prev.coin + 5}))
+	// 		this.setState({coin: (parseInt(localStorage.getItem("qkey") + 5))})
+	// 		//this.setState({...this.state, coin: this.stat
+	// 		// e.coin + 5});
+	// 		// alert(localStorage.getItem('coin'))
+
+	// 		localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("qkey"))+ parseInt(l3)))
+	// 		// alert(localStorage.getItem('coin'))
+	// 		const g = localStorage.getItem("coin");
+	// 		localStorage.setItem("qkey", g);
+	// 		// alert(localStorage.getItem("coin"))
+
+	// 		// alert(localStorage.getItem('coin'))
+
+	// 	}
+	// 	else{
+
+	// 		this.setState({coin: parseInt(localStorage.getItem("coin"))});
+	// 		//this.setState({...this.state, coin: this.state.coin + 7});
+	// 		//alert(localStorage.getItem('coin'))
+
+	// 		localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("qkey"))))
+	// 		// alert(localStorage.getItem('coin'))
+
+	// 	}
+
+	// 	localStorage.setItem("bkey", JSON.parse(this.state.coin))//	alert(this.state.coin)
+	// 	// alert(localStorage.getItem('coin'))
+	// 	if((count2) < 1){
+	// 		(count2) = (count2) + 1;
+	// 		this.setState({coin: localStorage.getItem('coin')})
+	// 	}
+	// 	// alert(localStorage.getItem("bkey"))
+	//   }
 
 	  
 	  nextStep() {
@@ -113,11 +205,27 @@ export default class ProgressBar extends React.Component{
 			localStorage.setItem('test', JSON.stringify(this.state.percentage + parseFloat(l)))
 
 		}
-		// alert(localStorage.getItem('pkey'))
+		
 		alert("Added!")
-		const l2 = localStorage.getItem('pkey')
-		const l3 = "5"
-		const l4 = "7"
+		// const l2 = localStorage.getItem('pkey')
+		
+		// const l3 = "5"
+		// const l4 = "7"
+		// const l2 = localStorage.getItem('test')
+		// this.setState({ test: false})
+
+		// const l3 = "5"
+		// const l4 = "7"
+		// if(	parseFloat(l2)>= 90.0){
+		// 	this.setState((prev) => ({ coin: prev.coin + 7}))
+		// 	//this.setState({...this.state, coin: this.state.coin + 7});
+		// 	localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("coin"))+ parseInt(l4)))
+		// }
+		// else if (parseFloat(l2) >= 50.0 && parseFloat(l2) < 90.0){
+		// 	this.setState((prev) => ({ coin: prev.coin + 5}))
+		// 	//this.setState({...this.state, coin: this.state.coin + 5});
+		// 	localStorage.setItem("coin", JSON.stringify(parseInt(localStorage.getItem("coin"))+ parseInt(l3)))
+		// }
 		// if(	parseFloat(l2)>= 90.0){
 		// 	this.setState((prev) => ({ coin: prev.coin + 7}))
 		// 	localStorage.setItem("coin", this.state.coin + parseInt(l4))
@@ -174,7 +282,7 @@ export default class ProgressBar extends React.Component{
 	return(
 	<> 
 	{parseInt(localStorage.getItem('pkey')) >= 100 && localStorage.setItem('pkey',JSON.stringify(100))}
-	{(parseInt(localStorage.getItem('pkey')) >= 100 && this.props.con)?<Confetti width = "1800" height ="900" numberOfPieces = "500"/>: <> </>}
+	{(parseInt(localStorage.getItem('pkey')) >= 100 && localStorage.getItem("t") !== null)?<Confetti width = "1800" height ="900" numberOfPieces = "500"/>: <> </>}
 	<div>
 		<Linegrph/>
 	</div>
@@ -182,6 +290,7 @@ export default class ProgressBar extends React.Component{
 	<h1 className= "coinCount">{this.state.coin}</h1>
 
 	<img className = "App-logo" src="./coinIcon.png"  /> 
+	{/* <ValueCommunicator /> */}
 
 		<Track >
 			{localStorage.getItem("fkey") !== null && (this.nextStep())}

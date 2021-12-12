@@ -5,6 +5,7 @@ import {Storage} from 'aws-amplify';
 import ValueCommunicator from "./ValueCommunicator";
 
 const VitaminB6actions = [
+    { label: "select", value: 0 },
     { label: "Chick Peas, canned 1 cup", value: 84.6 },
     { label: "Beef liver, pan fried, 3 ounces", value: 69.2 },
     { label: "Tuna, yellowfin, fresh, cooked, 3 ounces", value: 69.2 },
@@ -29,6 +30,7 @@ const VitaminB6actions = [
     { label: "Watermelon, raw, 1 cup", value: 7.7 }
   ];
   const Ironactions = [
+    { label: "select", value: 0 },
     { label: "Breakfast cereals, fortified with 100% of the DV for iron, 1 serving", value: 100 },
     { label: "Oysters, eastern, cooked with moist heat, 3 ounces", value: 100 },
     { label: "White beans, canned, 1 cup", value: 100 },
@@ -59,6 +61,7 @@ const VitaminB6actions = [
     { label: "Rice, brown, long and medium grain, cooked, 1 cup", value: 12.5 },
   ];
   const VitaminDactions = [
+    { label: "select", value: 0 },
     { label: "Cod liver oil, 1 tablespoon", value: 100 },
     { label: "Trout (rainbow), farmed, cooked, 3 ounces", value: 100 },
     { label: "Salmon (sockeye), cooked, 3 ounces", value: 94.7 },
@@ -75,6 +78,7 @@ const VitaminB6actions = [
     { label: "Chicken breast, roasted, 3 ounces", value: 0.7 },
   ];
   const VitaminCactions = [
+    { label: "select", value: 0 },
     { label: "Red Pepper, sweet, raw, 1/2 cup", value: 100 },
     { label: "Orange juice, 3/4 cup", value: 100 },
     { label: "Orange, 1 medium", value: 77.8 },
@@ -97,6 +101,7 @@ const VitaminB6actions = [
   ];
 
   const VitaminB12actions = [
+    { label: "select", value: 0 },
     { label: "Beef liver, cooked, pan-fried, 3 ounces", value: 100 },
     { label: "Clams (without shells), cooked, 3 ounces", value: 100 },
     { label: "Tuna, bluefin, cooked, dry heat, 3 ounces", value: 100 },
@@ -113,6 +118,7 @@ const VitaminB6actions = [
   ];
 
   const Magnesactions = [
+    { label: "select", value: 0 },
     { label: "Pumpkin seeds, roasted, 1 ounce", value: 39 },
     { label: "Chia seeds, 1 ounce", value: 27.8 },
     { label: "Almonds, dry roasted, 1 ounce", value: 20 },

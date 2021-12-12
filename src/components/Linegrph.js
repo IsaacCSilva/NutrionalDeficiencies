@@ -10,26 +10,41 @@ function Linegrph(){
 
 	// sunday		
 	if(date == 0){
-		ar[6] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Sun", JSON.stringify(s))
 	}
 	if(date == 1){
-		ar[0] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Mon", JSON.stringify(s))
 	}
 	if(date == 2){
-		ar[1] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Tues", JSON.stringify(s))
 	}
 	if(date == 3){
-		ar[2] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Wed", JSON.stringify(s))
 	}
 	if(date == 4){
-		ar[3] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Thurs", JSON.stringify(s))
 	}
 	if(date == 5){
-		ar[4] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Fri", JSON.stringify(s))
 	}
 	if(date == 6){
-		ar[5] = parseFloat(localStorage.getItem('pkey'));
+		var s = parseFloat(localStorage.getItem('pkey'));
+		localStorage.setItem("Sat", JSON.stringify(s))
 	}
+	// if(newDate.getMinutes() == 43){
+	// 	var s = parseFloat(localStorage.getItem('pkey'));
+	// 	localStorage.setItem("Tues", JSON.stringify(s))
+	// }
+	// if(newDate.getMinutes() == 44){
+	// 	var s = parseFloat(localStorage.getItem('pkey'));
+	// 	localStorage.setItem("Wed", JSON.stringify(s))
+	// }
 	// }
 	return <Line data= {{ 
 		labels:['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
@@ -38,8 +53,8 @@ function Linegrph(){
 			label:'Daily Value',
 			fill: true,
       		lineTension: 0.5,
-			data: ar,
-			borderColor:['#FF9900'],
+			data: [parseFloat(localStorage.getItem("Mon")), parseFloat(localStorage.getItem("Tues")),parseFloat(localStorage.getItem("Wed")), parseFloat(localStorage.getItem("Thurs")), parseFloat(localStorage.getItem("Fri")), parseFloat(localStorage.getItem("Sat")), parseFloat(localStorage.getItem("Sun"))],
+			borderColor:['#FF9900'], 
 			backgroundColor:['#FF9900'],
 			pointBackgroundColor: 'cadetblue',
 			pointBorderColor: 'cadetblue',
